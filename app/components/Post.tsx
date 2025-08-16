@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserPost } from './Posts'
-import { Bookmark, BookMarkedIcon, DotIcon, EllipsisVertical, HeartIcon, MessageSquare, MessageSquareMore } from 'lucide-react'
+import { Bookmark, BookMarkedIcon, DotIcon, EllipsisVertical, HeartIcon, MessageSquare, MessageSquareMore, Smile } from 'lucide-react'
 
 const  Post : React.FC<UserPost> = ({ image, avatar, name,caption}:UserPost) => {
   return (
@@ -21,6 +21,17 @@ const  Post : React.FC<UserPost> = ({ image, avatar, name,caption}:UserPost) => 
         </div>
         <Bookmark className='btn'/>
       </div>
+
+      {/* post comments */}
+      <p className='p-5 truncate'><span className='font-bold mr-2'>{name}</span>{caption}</p>
+
+      {/* post input box */}
+      
+      <form action="" className='flex items-center p-4'>
+        <Smile/>
+        <input className='border-none flex-1 focus:ring-0' type="text" placeholder='enter your comment ...' />
+        <button className='text-blue-400 font-bold'>Post</button>
+      </form>
     </div>
   )
 }
