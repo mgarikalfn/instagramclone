@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserPost } from './Posts'
-import { DotIcon, EllipsisVertical } from 'lucide-react'
+import { Bookmark, BookMarkedIcon, DotIcon, EllipsisVertical, HeartIcon, MessageSquare, MessageSquareMore } from 'lucide-react'
 
 const  Post : React.FC<UserPost> = ({ image, avatar, name,caption}:UserPost) => {
   return (
@@ -13,6 +13,14 @@ const  Post : React.FC<UserPost> = ({ image, avatar, name,caption}:UserPost) => 
       </div>
       {/* Post image */}
       <img className='object-cover w-full' src={image} alt="" />
+      {/* post buttons */}
+      <div className='flex justify-between px-4 pt-4'>
+        <div className='flex space-x-4'>
+          <HeartIcon className='btn'/>
+          <MessageSquareMore className='btn'/>
+        </div>
+        <Bookmark className='btn'/>
+      </div>
     </div>
   )
 }
