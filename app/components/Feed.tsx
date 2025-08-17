@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Stories from './Stories'
 import Posts from './Posts'
 import MiniProfile from './MiniProfile'
+import Suggestions from './Suggestions'
 
 const Feed = () => {
   return (
@@ -18,6 +20,7 @@ const Feed = () => {
       <MiniProfile/>
       {/* mini-profile */}
       {/* suggestions */}
+      <Suggestions/>
       </div>
     </section>
     
