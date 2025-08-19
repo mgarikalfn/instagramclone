@@ -4,7 +4,7 @@ import GoogleSignIn from '../components/GoogleSignIn'
 
 const SignInForm = () => {
   return (
-    <div>
+    <div className='flex flex-col gap-4'>
         <LoginForm/>
         <GoogleSignIn/>
     </div>
